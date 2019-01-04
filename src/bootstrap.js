@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import App from './components/app';
 import reducers from './reducers';
+import CheckoutForm from './components/checkout-form';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
@@ -16,7 +17,10 @@ function main() {
   ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
       <BrowserRouter>
-        <App />
+        <div>
+          <Route exact path="/" component={App} />
+          <Route path="/charge" component={CheckoutForm} />
+        </div>
       </BrowserRouter>
     </Provider>
     , document.querySelector('.app-wrapper'));
