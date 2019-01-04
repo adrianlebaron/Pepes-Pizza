@@ -10,7 +10,9 @@ export default class Home extends Component {
                 <img className="home-header" src='../../static/assets/images/backgrounds/oven.jpg'></img>
                 <div className="navbar">
                     <a href="">About Us</a>
-                    <button className="place-order">Place Order</button>
+                        <div className="nowiggles">
+                            <button className="place-order">Place Order</button>
+                        </div>
                     <a href="">Login</a>
                 </div>
                 <div className="carousel-wrapper">
