@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Home from './home';
+import Home from './chelsi-home';
 
 export default class App extends Component {
   render() {
