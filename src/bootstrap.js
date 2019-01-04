@@ -10,6 +10,7 @@ const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 import 'bootstrap/dist/css/bootstrap.css';
 import './style/main.scss';
+import './style/about.scss';
 
 
 function main() {
