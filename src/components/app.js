@@ -5,10 +5,9 @@ import CheckoutForm from './checkout-form';
 class App extends Component {
   render() {
     return (
-      <StripeProvider apiKey="pk_test_TYooMQauvdEDq54NiTphI7jx">
+      <StripeProvider apiKey="pk_test_12345">
         <div className="example">
-          <h1>Pepes Pizza</h1>
-          <h3>React Stripe Project</h3>
+          <h1>Pepes Pizza!</h1>
           <Elements>
             <CheckoutForm />
           </Elements>
