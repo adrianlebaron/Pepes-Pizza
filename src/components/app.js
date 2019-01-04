@@ -9,12 +9,7 @@ export default class App extends Component {
     return (
       <div className='layout-grid'>
       <h1> </h1>
-      <div>
-        <SignIn />
-      </div>
-      <div>
-        <SignUp />
-      </div>
+      <Home />
        
       </div>
     );
