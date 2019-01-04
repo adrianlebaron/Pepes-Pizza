@@ -1,0 +1,118 @@
+
+// INPUT
+
+.form-input,
+.form-textarea {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 10fr;
+    // grid-template-columns: 129px 500px;
+
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+
+    &__title {
+        grid-row: 1/-1;
+        grid-column: 1/2;
+    }
+    &__input {
+        grid-row: 1/-1;
+        grid-column: 2/3;
+    }
+}
+
+.form-input,
+.form-textarea {
+    &__title {
+        // @include red-title;
+    }
+    &__input {
+        height: 4rem;
+        // width: 50rem;
+        width: 100%;
+        border: 1px solid gray;
+        border-radius: .5rem;
+        padding-left: 2rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+}
+
+.form-textarea {
+    &__title {
+        align-self: start;
+    }
+    &__input {
+        resize: none;
+        height: 35.5rem;
+        padding-top: 1rem;
+    }
+}
+
+// BUTTON
+.form-button,
+.form-button-small {
+    &__button {
+        transition: all .2s ease;
+        &:focus {
+            outline: none;
+        }
+        &:active {
+            transform: scale(0.95) translateY(2.05px);
+        }
+    }
+}
+
+
+.form-button {
+    &__button {
+        height: 4rem;
+        width: 21.6rem;
+        border-radius: 2rem;
+        background-color: red;
+
+        color: white;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 2.8rem;
+        text-align: center;
+    }
+}
+  
+.form-button-small {
+
+    &__button {
+       border-radius: 1.6rem;
+       border: 1px solid gray;
+       width: 7.4rem;
+       height: 2.4rem;
+
+        font-size: 1.4rem;
+       line-height: 1.7rem;
+       text-align: center;
+
+        width: 13rem;
+   }
+
+    &__danger {
+       border: 1px solid red;
+       color: white;
+       background-color: red;
+   }
+} 
+ // IMAGE
+ .form-image {
+    display: flex;
+    flex-direction: column;
+    &__title {
+        // @include red-title;
+        margin-bottom: 2rem;
+    }
+    &__image {
+        height: 13.7rem;
+        width: 16rem;
+        border: none;
+    }
+} 		 
+		 

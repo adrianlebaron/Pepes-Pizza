@@ -12,6 +12,8 @@ class CheckoutForm extends Component {
     event.preventDefault();
     this.props.stripe.createToken({name: 'Name'}).then(({token}) => {
         console.log('Received Stripe token:', token);
+        this.setState({complete: true});
+
     fetch("/charge", {
         method: 'POST',
         headers: {
@@ -36,7 +38,12 @@ class CheckoutForm extends Component {
 // }
 
   render() {
-    if (this.state.complete) return <h1>Purchase Complete</h1>;
+    if (this.state.complete) return (
+        <div>
+            <h1>Purchase Complete!</h1>
+            <h3>Your order will be ready in 15 min!</h3>
+        </div>
+    )
     
     return (
       <div className="checkout">

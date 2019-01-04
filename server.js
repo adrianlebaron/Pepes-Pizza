@@ -1,11 +1,21 @@
-const express = require('express');
-const port = process.env.PORT || 8080;
-const app = express();
+const app = require("express")();
+const stripe = require("stripe")("sk_test_4eC39HqLyjWDarjtT1zdp7dc");
 
-app.use(express.static(__dirname + '/dist/'));
-app.get(/.*/, function (req, res) {
-  res.sendFile(__dirname + '/dist/index.html');
-})
-app.listen(port);
+app.use(require("body-parser").text());
 
-console.log("server started");
+app.post("/charge", async (req, res) => {
+    try {
+      let {status} = await stripe.charges.create({
+        amount: 2000,
+        currency: "usd",
+        description: "An example charge",
+        source: req.body
+      });
+  
+      res.json({status});
+    } catch (err) {
+      res.status(500).end();
+    }
+  });
+
+  app.listen(3450, () => console.log("Listening on port 3450"));

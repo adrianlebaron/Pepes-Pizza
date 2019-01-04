@@ -8,7 +8,7 @@ class App extends Component {
       <StripeProvider apiKey="pk_test_xPopPdNoDyQE1a1mwTDKnQ7E">
         <div className="example">
           <h1>Pepes Pizza</h1>
-          <h3>React Stripe Project</h3>
+          
           <Elements>
             <CheckoutForm />
           </Elements>
