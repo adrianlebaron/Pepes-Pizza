@@ -18,4 +18,4 @@ app.post("/charge", async (req, res) => {
     }
   });
 
-  app.listen(3450, () => console.log("Listening on port 3450"));
+  app.listen(3000, () => console.log("Listening on port 3000"));
