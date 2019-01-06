@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
+
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import SignIn from './components/auth/signin';
 import SignUp from './components/auth/signup';
@@ -10,6 +11,7 @@ import About from './components/about';
 import Home from './components/home';
 import CheckoutForm from './components/app'
 import reducers from './reducers';
+
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 

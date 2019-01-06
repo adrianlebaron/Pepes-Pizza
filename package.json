@@ -90,5 +90,4 @@
     "webpack": "^4.16.4"
   },
   "proxy": "http://localhost:3450"
-
 }
