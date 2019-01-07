@@ -39,7 +39,7 @@ class CheckoutForm extends Component {
 
   render() {
     if (this.state.complete) return (
-        <div>
+        <div className='complete'>
             <h1>Purchase Complete!</h1>
             <h3>Your order will be ready in 15 min!</h3>
         </div>

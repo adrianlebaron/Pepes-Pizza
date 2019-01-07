@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <StripeProvider apiKey="pk_test_12345">
-        <div className="example">
+        <div className="checkout-page">
           <h1>Pepes Pizza!</h1>
           <Elements>
             <CheckoutForm />
