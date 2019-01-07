@@ -8,7 +8,7 @@ import SignIn from './components/auth/signin';
 import SignUp from './components/auth/signup';
 // import Order from './components/order';
 import About from './components/about';
-import Home from './components/home';
+import Home from './components/chelsi-home';
 import CheckoutForm from './components/app'
 import reducers from './reducers';
 

@@ -1,19 +1,21 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 
-export default class Home extends Component {
+class Home extends Component {
     render() {
-        return(
+        return (
             <div className="home">
-                <h1>Pepés Pizza</h1>
+                <h1>Pepé's Pizza</h1>
                 <h2>Old world flavors at your fingertips</h2>
-                <img className="home-header" src='../../static/assets/images/backgrounds/oven.jpg'></img>
+                <img className="home-header" src='assets/images/pizzas/cheesepizza.jpeg'></img>
                 <div className="navbar">
-                    <a href="">About Us</a>
-                        <div className="nowiggles">
-                            <button className="place-order">Place Order</button>
-                        </div>
-                    <a href="">Login</a>
+                    <a href="../about">About Us</a>
+                    <div className="nowiggles">      
+                        <form method="get" action="/checkout">
+                        <button className="place-order">Place Order</button>
+                        </form>
+                    </div>
+                    <a href="../signin">Login</a>
                 </div>
                 <div className="carousel-wrapper">
                     <i className="fas fa-chevron-left"></i>
@@ -40,3 +42,5 @@ export default class Home extends Component {
         );
     }
 }
+
+export default Home;

@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <StripeProvider apiKey="pk_test_xPopPdNoDyQE1a1mwTDKnQ7E">
         <div className="example">
-          <h1>Pepes Pizza</h1>
+          <h1>Pepé's Pizza</h1>
           
           <Elements>
             <CheckoutForm />
