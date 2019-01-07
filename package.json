@@ -89,5 +89,5 @@
     "uglifyjs-webpack-plugin": "^1.2.7",
     "webpack": "^4.16.4"
   },
-  "proxy": "http://localhost:3450"
+  "proxy": "http://localhost:3000"
 }
